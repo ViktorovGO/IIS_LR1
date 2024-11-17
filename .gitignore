@@ -3,4 +3,5 @@
 *venv*
 .*
 *.db
-mlflow
+mlartifacts
+catboost_info

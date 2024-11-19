@@ -1,1 +1,1 @@
-['num__Present_Price', 'num__Driven_kms', 'cat__Car_Name', 'cat__Year', 'cat__Fuel_Type', 'quantile__Present_Price', 'quantile__Driven_kms', 'poly__Present_Price', 'poly__Present_Price^2', 'poly__Present_Price Driven_kms', 'spline__Driven_kms_sp_2', 'spline__Driven_kms_sp_3']
+['num__Present_Price', 'num__Driven_kms', 'cat__Car_Name', 'cat__Year', 'cat__Fuel_Type', 'quantile__Present_Price', 'quantile__Driven_kms', 'poly__Present_Price', 'poly__Present_Price^2', 'poly__Present_Price Driven_kms', 'poly__Driven_kms^2', 'spline__Driven_kms_sp_2']

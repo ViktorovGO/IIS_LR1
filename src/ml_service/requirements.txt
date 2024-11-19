@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pandas
+pickle4
+pydantic
+scikit-learn
+cloudpickle

@@ -3,5 +3,7 @@
 *venv*
 .*
 *.db
+*.pyc
+*.tsv
 mlartifacts
 catboost_info

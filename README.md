@@ -137,3 +137,32 @@ mse
 ```
 run_id = 5634505d3bec42a1b46c234e34c29cab
 ```
+
+## Сервис предсказаний
+
+#### Описание файлов в папке ml_service
+- api_handler.py содержит в себе обработчик модели, методы для загрузки модели и предсказания
+- Dockerfile содержит в себе всё необходимое для сборки изображения
+- main.py содержит в себе основное веб-приложение
+- requiremets.txt содержит необходимые пакеты для работы проекта
+- scemas.py описывает схему объекта таблицы
+  
+#### Описание файлов в папке models
+- get_model.py это скрипт для получения модели и записи её в файл формата pkl
+- model.pkl содержит модель
+  
+### Команды для создания образа и запуска контейнера
+Создание изображения 
+~~~
+docker build . --tag car_model:0
+~~~
+Запуск контейнера
+~~~
+docker run -p 8001:8000 -v "$(pwd)/../models:/models" car_model:0
+~~~
+
+### Проверка работоспособности сервера
+
+~~~
+curl -X 'POST' 'http://localhost:8001/api/prediction?car_id=1' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{"Car_Name": "ciaz", "Year": 2017,"Present_Price": 9.851562,"Driven_kms": 6900,"Fuel_Type": "Petrol","Selling_type": "Dealer","Transmission": "Manual","Owner": 0,"mileage_level": "Low"}'
+~~~
